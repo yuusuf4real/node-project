@@ -1,0 +1,11 @@
+{
+  "name": "node-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/yuusuf4real/node-project.git",
+  "author": "yusuf <yuusuf4real@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
