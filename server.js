@@ -1,15 +1,22 @@
-const http = require("http");
+const http = require("http")
+const axios = require("axios")
 
 const requestListener = function (req, res) {
-    res.setHeader("Content-Type", "application/json");
-    res.writeHead(200);
-    res.end(JSON.stringify({Helloo:"creating a Node project"}));
-};
+    res.setHeader("Content-Type", "application/json")
+    res.end()
 
-const host = 'localhost';
-const port = 8000;
+axios.get('/api/users?page=2')
+        
+    .then(resp => {
+         console.log(resp.data);
+    })
+    
+}
 
-const server = http.createServer(requestListener);
+const host = 'localhost'
+const port = 8000
+
+const server = http.createServer(requestListener)
 server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+    console.log(`Server is running on http://${host}:${port}`)
 });
